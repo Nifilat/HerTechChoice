@@ -41,7 +41,13 @@ function withdrawAmount(amount) {
 function changeStatus() {
  var currentStatus = account.status;
  account.status = !currentStatus;
- console.log("Your account status is " + account.status )
+ if(account.status == true) {
+  console.log("Your account status is active")
+ }
+ else{
+  console.log("Your account status is inactive")
+ }
+ 
 }
 
 createAccount("Latunde Oluwanifemi", "24", "CMF Hostel", 20000);
