@@ -14,6 +14,7 @@
   "author": "Latunde Oluwanifemi",
   "license": "ISC",
   "dependencies": {
-    "node-persist": "^3.1.0"
+    "node-persist": "^3.1.0",
+    "yargs": "^17.3.1"
   }
 }

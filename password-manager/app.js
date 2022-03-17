@@ -1,16 +1,40 @@
-const storage = require("node-persist")
+const {getItem, setItem} = require("node-persist")
+const storage = require("node-persist");
 
+console.log("Starting password manager!!!")
 
-console.log('Starting Password Manager!!!!!');
-
-async function store() {
+async function createAccount(account) {
  await storage.init();
- var name = await storage.getItem("name")
- var realname = await storage.getItem("realname")
+ var accounts = await storage.getItem("accounts");
 
- console.log(name +" " + realname)
- 
- 
+ if (typeof accounts == "undefined") {
+  var accounts = []
+  accounts.push(account)
+  await storage.setItem("accounts", accounts)
+ }
+ else {
+  accounts.push(account);
+  await storage.setItem("accounts", accounts)
+ }
 }
 
-store();
+async function getAccount(name) {
+ await storage.init();
+ var accounts = await storage.getItem("accounts")
+
+ if (typeof accounts == "undefined") {
+  console.log("No accounts yet")
+ }
+
+ else {
+  accounts.map((account) =>{
+   if (account.name == name) {
+    console.log(account)
+   }
+  })
+ }
+
+
+}
+
+getAccount("Facebook")
