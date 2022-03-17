@@ -1,1 +1,1 @@
-{"key":"accounts","value":[{"name":"Facebook","username":"Nifi","password":"12345"},{"name":"Instagram","username":"Nifi","password":"1234567"}]}
+{"key":"accounts","value":[{"name":"Facebook","username":"Nifi","password":"12345"},{"name":"Instagram","username":"Nifi","password":"1234567"},{"name":"Twitter","username":"Nifi","password":123456789}]}
